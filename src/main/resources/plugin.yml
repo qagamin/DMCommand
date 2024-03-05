@@ -1,0 +1,6 @@
+name: CommandSender
+version: '${project.version}'
+main: top.darkmine.comm.commandsender.CommandSender
+api-version: 1.20
+softdepend: [ AureliumSkills ]
+authors: [ wotyk ]
