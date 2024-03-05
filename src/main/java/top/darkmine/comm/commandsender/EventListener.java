@@ -26,9 +26,11 @@ public class EventListener implements Listener {
         Player player = eventQuit.getPlayer();
         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), line + player.getName());
     }
+
     @EventHandler
     public void onJoinServer(PlayerJoinEvent eventJoin) {
         Player player = eventJoin.getPlayer();
         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), line + player.getName());
     }
+
 }
