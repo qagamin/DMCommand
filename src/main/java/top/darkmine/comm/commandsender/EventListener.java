@@ -5,6 +5,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerChangedWorldEvent;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
 public class EventListener implements Listener {
@@ -23,6 +24,11 @@ public class EventListener implements Listener {
     @EventHandler
     public void onQuitServer(PlayerQuitEvent eventQuit) {
         Player player = eventQuit.getPlayer();
+        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), line + player.getName());
+    }
+    @EventHandler
+    public void onJoinServer(PlayerJoinEvent eventJoin) {
+        Player player = eventJoin.getPlayer();
         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), line + player.getName());
     }
 }
